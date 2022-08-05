@@ -8,7 +8,7 @@ language: 'en-uk'
 
 # Website info
 name: 'The Tideflats'
-description: "All is for naught."
+description: "An audio project examining distance, urban planning and the history of the Tacoma Tideflats."
 
 short_url: 'aweymo.github.io/tideflats/'
 google_analytics: UA-69281367-1
