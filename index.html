@@ -7,39 +7,137 @@ navigation: False
 logo:
 current: home
 ---
-<!-- < default -->
-<!-- The tag above means - insert everything in this file into the [body] of the default.hbs template -->
+{%- assign items = site.data[site.metadata] -%}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  img {
+  width: 800px;
+  height: 600px;
+  object-fit: contain;
+}
+* {
+  box-sizing: border-box;
+}
 
-<!-- The big featured header  -->
-<header class="main-header {% if page.cover %}"
-        style="background-image: url({{ site.baseurl }}{{ page.cover }}) {% else %}no-cover{% endif %}">
-    <nav class="main-nav overlay clearfix">
-        {% endif %}
-            @media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-            }
+.column {
+  float: left;
+  padding: 10px;
+  height: 600px; 
+}
 
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
+.left {
+  width: 40%;
+}
+  
+.column {
+  float: right;
+  padding: 10px;
+  height: 600px; 
   }
-    </nav>
-    <div class="vertical">
-        <div class="main-header-content inner">
-        </div>
+  
+.right {
+  width: 60%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ @media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column left" style="background-color:#FFFFFF;">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h4><p><b>This work is a partial representation of the Tacoma Public Library Northwest Room's Lost Tacoma collection,</b></p></h4>
+    <p>constituting 116 of the total 560 blueprints across 28 locations. Technical drawings include both proposed buildings which were never constructed and constructed buildings which are now demolished.</p>
+    <br>
+    <sub>The Buffelen Apartments, original scan and reformatted image</sub>
     </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
-</header>
-
-<!-- The main content area on the homepage -->
-<main id="content" class="content" role="main">
-
-    <!-- The tag below includes the post loop - partials/loop.hbs -->
-    {% include loop.html %}
-
-</main>
+  <div class="column right" style="background-color:#FFFFFF;">
+    <a href="https://aweymo.github.io/losttacoma/item.html?id=lt120"><img src="https://aweymo.github.io/losttacoma/objects/coe_buffelenapartments_01.jpeg" alt="Buffelen Apertments" style="max-width:100%;"></a>
+  </div>
+</div>
+  <div class="row">
+  <div class="column left" style="background-color:#FFFFFF;">
+    <br>
+    <br>
+    <p><strong>Restoration</strong></p>
+    <br>
+    <p>Scans of the blueprints were not performed by the Tacoma Public Library and some cropping and levels of the image files are not ideal.
+    Technical drawings have been reformatted and restored for legibility.</p>
+    <br>
+    <p><strong>Navigation</strong></p>
+    <br>
+    <p>Most of the storage for the site is dedicated to the technical drawings, which can be expanded and explored in detail <a href="https://aweymo.github.io/losttacoma/browse.html">within the item pages</a>. 
+     To expand any of the images in the <i>Buildings</i> and <i>Architects</i> sections, use the <a href="https://cdm17061.contentdm.oclc.org/digital/collection/p17061coll1/id/18425/rec/1">hyperlink</a> in the caption below, 
+     which will bring you to the full archival record.</p>
+    <br>
+    <sub>The Pacific Refrigerating Company, original scan and reformatted image</sub>
+    </div>
+  <div class="column right" style="background-color:#FFFFFF;">
+    <a href="https://aweymo.github.io/losttacoma/item.html?id=lt121"><img src="https://aweymo.github.io/losttacoma/objects/coe_pacificrefridgeration_17s3.jpeg" alt="Pacific Refridgeration" style="max-width:100%;"></a>
+  </div>
+</div>
+  <div class="row">
+  <div class="column left" style="background-color:#FFFFFF;">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Restoration, arrangement and description was performed by <a href="http://a-rains.squarespace.com/">Andrew Weymouth</a> on behalf of the <a href="https://www.tacomalibrary.org/northwestroom/">Tacoma Public Library Northwest Room</a>.
+    <br>
+    <br>
+    Visit this collection through Northwest ORCA <a href="https://northwestroom.tacomalibrary.org/index.php/lost-tacoma-project-collection">here</a>.</p>
+    <br>
+    <sub>The Talmud Torah Synagogue, original scan and reformatted image</sub>
+    </div>
+  <div class="column right" style="background-color:#FFFFFF;">
+    <a href="https://aweymo.github.io/losttacoma/item.html?id=lt122"><img src="https://aweymo.github.io/losttacoma/objects/coe_talmud_torah_12.jpeg" alt="Talmud Torah Synagogue" style="max-width:100%;"></a>
+  </div>
+ </div>
+ <div class="row">
+  <div class="column left" style="background-color:#FFFFFF;">
+    <a href="http://a-rains.squarespace.com/"><img src="https://aweymo.github.io/losttacoma/objects/headshot.18.png" alt="Andrew Weymouth" style="max-width:100%;"></a>
+    </div>
+  <div class="column right" style="background-color:#FFFFFF;">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p><strong>Andrew Weymouth</strong> is an archivist, exhibit designer and writer working in Tacoma, WA. He is the recipient of the 2021 Visual Resources Association Foundation grant, 
+    the University of Oregon's Vollstedt program and the University of Washington's Storytelling Fellows.
+    He has created digital exhibits for academic faculty concerning <a href="http://collections.evergreen.edu/s/selfdetermination/page/Introduction">Indigenous higher education reform</a>, 
+    <a href="https://aweymo1.wixsite.com/eba-visualization">historical network analysis</a> and a <a href="https://gnmedatabase.github.io/site/">Middle Eastern graphic novel database</a>. Previous writing concerning displacement, settler colonialism and oral history have been 
+    published in the <a href="https://mydigitalpublication.com/publication/?i=690860&p=11&ver=html5">Society of American Archivists' Archival Outlook</a>, <a href="https://litwinbooks.com/books/">Library Juice Press (forthcoming August 2022)</a>
+    and <a href="https://www.tandfonline.com/doi/full/10.1080/0361526X.2021.1985685">The Serials Librarian</a>.
+    <br>
+    <br>
+    <sub>contact: andrewrainsweymouth@gmail.com</sub></p>
+    <br>
+    <br>
+  </div>
+ </div>
+    <br>
+    <br>
+</body>
+</html>
