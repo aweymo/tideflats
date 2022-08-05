@@ -18,6 +18,14 @@ current: home
         {% if page.navigation %}
             <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
         {% endif %}
+            }
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
